@@ -3,15 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class nextscene : MonoBehaviour
+public class MoveScene_OnKeyPress : MonoBehaviour
 {
-    public string scenename;
+    [SerializeField] private string scenename;
+    [SerializeField] private GameObject uiElement;
 
-    void OnTriggerEnter(Collider other)
+
+    private void OnTriggerStay(Collider other)
+    {
+        
+        if (other.CompareTag("Player"))
+        {
+            uiElement.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                SceneManager.LoadScene(scenename);
+            }
+
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(scenename);
+            uiElement.SetActive(false);
         }
     }
+
+
+
+
+
 }
