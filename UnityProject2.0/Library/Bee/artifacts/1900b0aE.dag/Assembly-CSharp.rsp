@@ -359,6 +359,7 @@
 "Assets/Environment Assests/LowPolyWater_Pack/Scripts/LowPolyWater.cs"
 "Assets/Environment Assests/ModularFirstPersonController/FirstPersonController/FirstPersonController.cs"
 "Assets/Environment Assests/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/MouseLook.cs"
+"Assets/Script/ScenesManager.cs"
 -langversion:9.0
 
 /deterministic
